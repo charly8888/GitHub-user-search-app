@@ -182,6 +182,9 @@ body{
 }
 
 @media screen and (max-width: 540px){
+    .main{
+        width:360px;
+    }
     .result{
         grid-template-columns: 1fr 2fr;
         grid-template-areas:
