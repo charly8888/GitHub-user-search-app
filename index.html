@@ -5,8 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front end mentor GitHub App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-    
+    <!-- Main witget -->
+    <main class="main">
+
+        <!-- Header -->
+
+        <header class="header">
+            <h1 class="header__title">Devfinder</h1>
+            <nav class="theme">LIGHT<i class="fa fa-sun"></i></nav>
+        </header>
+
+        <!-- Search -->
+
+        <section class="search">
+            <form class="form">
+                <i class="fa fa-search form__icon"></i>
+                <input type="search" class="form__input" placeholder="Search GitHub username..." required>
+                <input type="submit" class="form__button" value="Search">
+            </form>
+        </section>
+
+        <!-- Result -->
+
+        <article class="result">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="imagen del avatar" class="avatar">
+                <!-- user info -->
+                <h2 class="name">Name and Surneme</h2>
+                <h4 class="joined">Joined 25 Jan 2021</h4>
+                <h5 class="username">username</h5>
+                <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, unde. Voluptates porro laborum velit ipsum excepturi illum. Quae modi enim delectus porro aliquam in quibusdam.</p>
+                <!-- stats -->
+                <section class="stats">
+                    <p class="repos"><small>Repos</small></p>
+                    <p class="followers"><small>Followers</small></p>
+                    <p class="following"><small>following</small></p>
+                    <p >8</p>
+                    <p >3032</p>
+                    <p >9</p>
+                </section>
+                <!-- contact -->
+                <nav class="contact">
+                    <a href="#" class="link"><i class="fa fa-map-marker-alt"></i> San Francisco</a>
+                    <a href="#" class="link"><i class="fab fa-twitter"></i>Not available</a>
+                    <a href="#" class="link"><i class="fa fa-link"></i>https://github.blog</a>
+                    <a href="#" class="link"><i class="fa fa-building"></i>GitHub</a>
+                </nav>
+        </article>
+
+    </main>
 </body>
 </html>
