@@ -1,5 +1,4 @@
 /* General */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -11,7 +10,6 @@ html, body{
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: #141c2f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +19,8 @@ body{
 /* Main */
 
 .main{
-    width:70%;
-    max-width: 970px;
+    width:80%;
+    max-width: 768px;
     min-height: 20rem;
 }
 
@@ -39,7 +37,6 @@ body{
     margin: 0;
     font-weight: normal;
     font-size: 1.5rem;
-    color:lightgray;
 }
 
 .theme{
@@ -50,13 +47,18 @@ body{
     margin:0 0 0 1rem;
 }
 
+.theme__switch{
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Search */
 
 .search{
-    padding: 0 1.8rem;
-    background-color: #1f2a48;
+    padding: 0 1.4rem;
     border-radius: 1rem;
     margin-bottom: 1.5rem;
+
 }
 
 .form{
@@ -65,28 +67,27 @@ body{
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    gap: 1rem;
 }
 
 .form__icon{
-    color: #364570;
     font-size: 1.6rem;
+    margin-right: 1rem;
 }
 
 .form__button{
-    background-color: #364570;
+    background-color: #2349b4;
     border: none;
     padding: 1rem;
     border-radius: .8rem;
     color:lightgray;
     font-size: 1.1rem;
     cursor: pointer;
+    margin-left: 1rem;
 }
 .form__input{
     flex-grow: 1;
     background-color: inherit;
     border: none;
-    color:lightgray;
     font-family: inherit;
     outline: none;
     cursor: pointer;
@@ -97,7 +98,6 @@ body{
 
 .result{
     padding: 1.8rem;
-    background-color: #1f2a48;
     display:grid;
     border-radius: 1rem;
     grid-template-columns: 1fr 2fr 2fr;
@@ -110,13 +110,23 @@ body{
         ". contact contact"
         ;
 }
+.waiting, .not-found{
+    grid-column-start: 1;
+    grid-column-end:4;
+    grid-row-start: 1;
+    grid-row-end:6;
+    width: 100%;
+    border-radius:0.8rem;
+}
+
 .avatar{
     min-width: 100px;
     max-width:140px;
     width: 80%;
     grid-area: avatar;
     justify-self: center;
-    align-self: start;
+    align-self: center;
+    border-radius: 50%;
 }
 .name{
     grid-area: name;
@@ -136,18 +146,16 @@ body{
 .username{
     grid-area: username;
     font-weight: normal;
-    color: #364570;
     margin: .5rem;
+    color:#2349b4 ;
 }
 .bio{
     grid-area: bio;
     font-size: .8rem;
-    color: lightgray;
     margin: .5rem;
 }
 .stats{
     grid-area: stats;
-    background-color: #141c2f;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -183,7 +191,7 @@ body{
 
 @media screen and (max-width: 540px){
     .main{
-        width:360px;
+        width:90%;
     }
     .result{
         grid-template-columns: 1fr 2fr;
@@ -211,5 +219,14 @@ body{
     }
     .bio{
         margin-top: 1.5rem;
+    }
+}
+@media  screen and (max-width:440px){
+    .contact{
+        grid: 1fr / 4fr;
+        gap: 1rem;
+    }
+    .main{
+        min-width: 320px;
     }
 }
