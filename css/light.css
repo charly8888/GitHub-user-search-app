@@ -22,8 +22,6 @@ body{
     box-shadow: 4px 7px 18px -9px rgba(0,0,0,0.5);
 }
 
-::placeholder{
-}
 
 .form__icon{
     color: #364570;
